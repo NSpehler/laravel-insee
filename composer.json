@@ -1,0 +1,19 @@
+{
+    "name": "nspehler/laravel-insee",
+    "description": "Laravel wrapper for Insee API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Spehler",
+            "email": "Nicolas@Spehler.com",
+            "homepage": "https://nspehler.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "NSpehler\\LaravelInsee\\": "src"
+        }
+    },
+    "require": {}
+}
