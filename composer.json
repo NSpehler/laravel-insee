@@ -1,7 +1,7 @@
 {
     "name": "nspehler/laravel-insee",
     "type": "library",
-    "description": "Laravel wrapper for Insee API",
+    "description": "Lookup SIREN and SIRET numbers from Laravel",
     "keywords": [
         "laravel",
         "insee",
