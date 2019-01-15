@@ -1,6 +1,13 @@
 {
     "name": "nspehler/laravel-insee",
+    "type": "library",
     "description": "Laravel wrapper for Insee API",
+    "keywords": [
+        "laravel",
+        "insee",
+        "siren",
+        "siret"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -9,11 +16,23 @@
             "homepage": "https://nspehler.com"
         }
     ],
-    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+    },
     "autoload": {
         "psr-4": {
             "NSpehler\\LaravelInsee\\": "src"
         }
     },
-    "require": {}
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NSpehler\\LaravelInsee\\InseeServiceProvider"
+            ],
+            "aliases": {
+                "Insee": "NSpehler\\LaravelInsee\\Facades\\Insee"
+            }
+        }
+    }
 }

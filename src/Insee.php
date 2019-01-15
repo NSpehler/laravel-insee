@@ -29,16 +29,33 @@ class Insee
         return $result->access_token;
     }
 
-    public function siren($siren)
+    public function get($type, $number)
     {
-        // Verify SIREN number with Insee
+        // Format number
+        $number = str_replace(' ', '', $number);
+
+        // Fetch company information from Insee
         $client = new Client();
-        $result = $client->get('https://api.insee.fr/entreprises/sirene/V3/siren/'. $siren, [
+        $result = $client->get('https://api.insee.fr/entreprises/sirene/V3/'. $type .'/'. $number, [
             'headers' => [
                 'Authorization' => 'Bearer '. $this->access_token()
             ]
         ]);
 
-        return json_decode($result->getBody(), true);
+        return json_decode($result->getBody());
+    }
+
+    public function siren($siren)
+    {
+        $result = $this->get('siren', $siren);
+
+        return $result->uniteLegale;
+    }
+
+    public function siret($siret)
+    {
+        $result = $this->get('siret', $siret);
+
+        return $result->etablissement;
     }
 }
