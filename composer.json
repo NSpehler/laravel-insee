@@ -8,6 +8,7 @@
         "siren",
         "siret"
     ],
+    "homepage": "https://github.com/NSpehler/laravel-insee",
     "license": "MIT",
     "authors": [
         {

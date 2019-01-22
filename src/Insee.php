@@ -21,7 +21,7 @@ class Insee
             ],
             'form_params' => [
                 'grant_type' => 'client_credentials'
-            ]
+            ],
         ]);
 
         $result = json_decode($result->getBody());
@@ -39,7 +39,8 @@ class Insee
         $result = $client->get('https://api.insee.fr/entreprises/sirene/V3/'. $type .'/'. $number, [
             'headers' => [
                 'Authorization' => 'Bearer '. $this->access_token()
-            ]
+            ],
+            'http_errors' => false,
         ]);
 
         return json_decode($result->getBody());
@@ -47,15 +48,11 @@ class Insee
 
     public function siren($siren)
     {
-        $result = $this->get('siren', $siren);
-
-        return $result->uniteLegale;
+        return $this->get('siren', $siren);
     }
 
     public function siret($siret)
     {
-        $result = $this->get('siret', $siret);
-
-        return $result->etablissement;
+        return $this->get('siret', $siret);
     }
 }
