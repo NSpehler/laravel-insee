@@ -65,5 +65,10 @@ Insee::siret('840 745 111 00012');
 - [Nicolas Spehler](https://nspehler.com)
 - [Moon](https://moon.xyz)
 
+## Testing
+<img src="https://dev.ls.agency/img/BrowserStack-Logo.svg" width="250" height="54">  
+
+This project uses [BrowserStack](https://browserstack.com) for cross browser testing. We're grateful for their contribution to the open source community.
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
