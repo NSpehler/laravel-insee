@@ -25,8 +25,7 @@ class InseeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('laravel-insee', function()
-        {
+        $this->app->bind('laravel-insee', function () {
             return new Insee();
         });
     }

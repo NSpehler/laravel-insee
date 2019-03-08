@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'consumer_key' => env('INSEE_CONSUMER_KEY'),
+    'consumer_key'    => env('INSEE_CONSUMER_KEY'),
     'consumer_secret' => env('INSEE_CONSUMER_SECRET'),
 
 ];
